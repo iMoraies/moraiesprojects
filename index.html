@@ -10,7 +10,6 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
     <title>Moraies Projects</title>
-    </title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -36,7 +35,8 @@
             <div>
                 <span class="kicker">Sites modernos e Design profissional</span>
                 <h2 class="headline">Transforme suas ideias em <span class="destaque">projetos digitais</span></h2>
-                <p class="lead">Criação de sites responsivos, automações, lojas virtuais e design gráfico criativo<br> para
+                <p class="lead">Criação de sites responsivos, automações, lojas virtuais e design gráfico criativo<br>
+                    para
                     impulsionar sua marca.</p>
                 <div class="actions">
                     <a href="#contato" class="btn-cta">Solicitar Orçamento</a>
@@ -91,10 +91,19 @@
 
     <section id="contato" class="contact-section">
         <h2>Peça seu Orçamento:</h2>
-        <form class="form">
-            <input type="text" placeholder="Seu nome" required>
-            <input type="tel" placeholder="Seu celular" required>
-            <textarea class="full" rows="5" placeholder="Mensagem" required></textarea>
+        <form class="form" id="whatsappForm" novalidate>
+            <input type="text" id="nome" placeholder="Seu nome" required>
+            <input type="tel" id="telefone" placeholder="Seu celular (DDD + número)" required>
+            <textarea class="full" id="mensagem" rows="5" placeholder="Mensagem" required></textarea>
+            <input type="file" id="arquivo" accept="image/*,.pdf,.doc,.docx">
+
+            <!-- Barra de progresso -->
+            <div class="progress-container full">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+
+            <p id="statusMsg" class="status-msg"></p>
+
             <button type="submit" class="btn-cta full">Enviar Projeto</button>
         </form>
     </section>
@@ -102,6 +111,8 @@
     <footer>
         <p>© 2025 Matheus Moraes — Desenvolvedor & Designer Gráfico</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

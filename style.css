@@ -31,7 +31,6 @@ body {
     height: 52px;
     border-radius: 12px;
     background: url("./images/logo2.jpg") center/cover no-repeat;
-    /* coloca sua logo */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,7 +164,6 @@ h5 {
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: italic;
-
 }
 
 .portfolio {
@@ -296,4 +294,55 @@ footer {
     .form {
         grid-template-columns: 1fr;
     }
+}
+
+/* --- Novidades: Validação, barra de progresso e status --- */
+
+/* Validação elegante */
+/* Normal */
+.form input,
+.form textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: transparent;
+    color: #e6eef8;
+    outline: none;
+}
+
+/* Só mostra vermelho se o usuário focar e sair sem preencher */
+.form input:invalid:focus,
+.form textarea:invalid:focus {
+    border: 1px solid rgba(255, 80, 80, 0.6);
+}
+
+/* Verde apenas depois de preencher corretamente */
+.form input:valid,
+.form textarea:valid {
+    border: 1px solid rgba(129, 107, 255, 0.6);
+}
+
+/* Barra de progresso */
+.progress-container {
+    height: 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    margin-top: 6px;
+    display: none;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #816bff, #b566ff);
+    transition: width 0.3s ease;
+}
+
+/* Mensagens de status */
+.status-msg {
+    grid-column: 1 / -1;
+    font-size: 13px;
+    margin: 6px 0;
+    color: #9fb0c8;
 }
